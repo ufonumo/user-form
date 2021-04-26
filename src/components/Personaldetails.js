@@ -42,7 +42,7 @@ export class Personaldetails extends Component {
                                 required
                                 name='height'
                                 fullWidth
-                                onChange={handleChange('height ')}
+                                onChange={handleChange('height')}
                                 defaultValue={values.height }
                             />
                             <div>
@@ -53,7 +53,7 @@ export class Personaldetails extends Component {
                                     required
                                     name='weight'
                                     fullWidth
-                                    onChange={handleChange('weight ')}
+                                    onChange={handleChange('weight')}
                                     defaultValue={values.weight }
                                 />
                             </div>
@@ -99,19 +99,20 @@ export class Personaldetails extends Component {
                                     labelPlacement="start"
                                     margin="normal"
                                     required
+                                    onChange={handleChange('disability')}
                                     fullWidth
                                     name='disability'
-                                    onChange={handleChange('disability')}
-                                />
+                               />
                             </div>
                           
-                            <div style={styles.upload}>
+                            {/* <div style={styles.upload}>
                                 <FormLabel style={styles.formlabel} component="legend">Upload Fingerprint</FormLabel>
                                 <input
                                     accept="image/*"
                                     id="contained-button-file"
                                     multiple
                                     name='fingerprint'
+                                    onChange={handleChange('disability')}
                                     type="file"
                                     style={styles.input}
                                 />
@@ -121,7 +122,7 @@ export class Personaldetails extends Component {
                                     Upload 
                                     </Button>
                                 </label>
-                            </div>
+                            </div> */}
 
                             <FormControl style={styles.top}>
                                 <InputLabel fullWidth id="demo-simple-select-label">Marital Status</InputLabel>
@@ -133,11 +134,11 @@ export class Personaldetails extends Component {
                                     name='marital_status'
                                     onChange={handleChange}
                                     >
-                                    <MenuItem value={1}>Single</MenuItem>
-                                    <MenuItem value={2}>Married</MenuItem>
-                                    <MenuItem value={3}>Divorce</MenuItem>
-                                    <MenuItem value={4}>Widow</MenuItem>
-                                    <MenuItem value={5}>Widower</MenuItem>
+                                    <MenuItem value={'Single'}>Single</MenuItem>
+                                    <MenuItem value={'Married'}>Married</MenuItem>
+                                    <MenuItem value={'Divorce'}>Divorce</MenuItem>
+                                    <MenuItem value={'Widow'}>Widow</MenuItem>
+                                    <MenuItem value={'Widower'}>Widower</MenuItem>
 
                                 </Select>
                             </FormControl>

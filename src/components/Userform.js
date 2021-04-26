@@ -7,7 +7,6 @@ import Educational from './Educational';
 
 export class Userform extends Component {
 
-
     state = {
         step: 1,
         photo_url: '',
@@ -60,7 +59,9 @@ export class Userform extends Component {
 
     handleChange = input => e =>{
         this.setState({
-            [input]: e.target.value
+            [input]: e.target.value,
+            // [input]: e.target.checked
+
         })
     }
 
@@ -70,8 +71,24 @@ export class Userform extends Component {
     }
 
     render() {
-        const {step} = this.state;
-        const values = {step}
+        const { step } = this.state;
+        const { photo_url , registration_no, rank, department, state_of_service, 
+        current_residential_address, first_name, date_of_birth, other_name , 
+        surname, maiden_name, sex, religion, blood_group, facial_marks, disability,
+        height , weight , personal_phone_no, nationality , state_of_origin , village,
+        permanent_home_address, national_identity_no , marital_status, email_address , educational_qualification,
+        next_of_kin, relationship_with_next_of_kin, next_of_kin_address , next_of_kin_phone_no,
+        } =  this.state
+
+        const values = {photo_url , registration_no, rank, department, state_of_service, 
+        current_residential_address, first_name, date_of_birth, other_name , 
+        surname, maiden_name, sex, religion, blood_group, facial_marks, disability,
+        height , weight , personal_phone_no, nationality , state_of_origin , village,
+        permanent_home_address, national_identity_no , marital_status, email_address , educational_qualification,
+        next_of_kin, relationship_with_next_of_kin, next_of_kin_address , next_of_kin_phone_no,
+        }
+
+        console.log(values);
 
         switch(step){
             case 1: 
@@ -83,12 +100,12 @@ export class Userform extends Component {
                     />
                 )
             case 2: 
-                    return <Personaldetails
-                        nextStep={this.nextStep}
-                        handleChange={this.handleChange}
-                        previousStep={this.previousStep}
-                        values={values}
-                    />
+                return <Personaldetails
+                    nextStep={this.nextStep}
+                    handleChange={this.handleChange}
+                    previousStep={this.previousStep}
+                    values={values}
+                />
             case 3: 
                 return <Workdetails
                 nextStep={this.nextStep}

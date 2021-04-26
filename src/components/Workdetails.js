@@ -54,7 +54,6 @@ export class Workdetails extends Component {
                                 name='current_residential_address'
                             />
                         </div>
-                       
 
                         <div>
                             <TextField hintText='Enter your Village'
@@ -85,7 +84,6 @@ export class Workdetails extends Component {
                             />
                         </div>
         
-
                         <div>
                             <TextField hintText='Enter your State of Origin '
                                 floatingLabelText="State of Origin"
@@ -120,16 +118,17 @@ export class Workdetails extends Component {
                                         onClick={this.previous}
                                     />
                                 </Grid>
+
                                 <Grid item xs sm>
-                                <RaisedButton
-                                    label='Continue'
-                                    primary={true}
-                                    type="button"
-                                    className='btn'
-                                    margin="normal"
-                                    fullWidth
-                                    onClick={this.continue}
-                                />
+                                    <RaisedButton
+                                        label='Continue'
+                                        primary={true}
+                                        type="button"
+                                        className='btn'
+                                        margin="normal"
+                                        fullWidth
+                                        onClick={this.continue}
+                                    />
                                 </Grid>
                             </Grid>
                     </Container>

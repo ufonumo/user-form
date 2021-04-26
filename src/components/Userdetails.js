@@ -55,12 +55,13 @@ export class Userdetails extends Component {
                                 defaultValue={values.email_address}
                                 fullWidth
                                 name='email_address'
+                                type='text'
                             />
                         </div>
                         <div>
                             <TextField hintText='Enter your Phone Number'
                                 floatingLabelText="Phone Number"
-                                onChange={handleChange('email_address')}
+                                onChange={handleChange('personal_phone_no')}
                                 defaultValue={values.personal_phone_no}
                                 fullWidth
                                 type='number'
@@ -83,6 +84,7 @@ export class Userdetails extends Component {
                                 label="Birthday"
                                 type="date"
                                 fullWidth
+                                onChange={handleChange('date_of_birth')}
                                 name='date_of_birth'
                                 defaultValue="2017-05-24"
                                 InputLabelProps={{
@@ -102,18 +104,18 @@ export class Userdetails extends Component {
                                     margin="normal"
                                     required
                                     fullWidth
-                                    onChange={handleChange('disability')}
+                                    onChange={handleChange('sex')}
                                 />
                                 <FormControlLabel
                                     control={<Checkbox value="disability" color="primary" />}
                                     label="Male"
-                                    defaultValue={values.disability}
+                                    defaultValue={values.sex}
                                     labelPlacement="start"
                                     margin="normal"
                                     required
                                     fullWidth
                                     name='female'
-                                    onChange={handleChange('disability')}
+                                    onChange={handleChange('sex')}
                                 />
                             </div>
 
@@ -126,9 +128,9 @@ export class Userdetails extends Component {
                                 onClick={this.continue}
                             />
                         </div>
-                    </Container>
+                     
 
-                                  
+                    </Container>                                  
                     
                 </React.Fragment>
             </MuiThemeProvider>
